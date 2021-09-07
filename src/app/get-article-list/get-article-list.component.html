@@ -2,11 +2,12 @@
     <div class="row">
       <div class="col-12 col-sm-8 col-lg-5">
         <h6 class="text-muted">Liste d'articles</h6> 
-        <ul class="list-group" *ngFor="let pist of MyList">
+        <ul class="list-group" *ngFor="let pist of MyList;">
           <li class="list-group-item d-flex justify-content-between align-items-center">
             {{pist.titre}}<br/>
             {{pist.description}} <br/>
-            {{pist.prix}} Euros
+            {{pist.prix}} Euros <br/>
+            <button><a href="http://localhost:4200/article/{{pist.id}}">Regarder</a></button>
             <div class="image-parent">
                 <img src="../assets/images/{{pist.image}}" class="img-fluid" alt="quixote">
             </div>
