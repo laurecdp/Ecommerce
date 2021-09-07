@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjetECommerce';
+  logout() {
+    sessionStorage.clear();
+    console.log("clean");
+    window.location.href='http://localhost:4200/login/';
+  }
 }
