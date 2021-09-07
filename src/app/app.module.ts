@@ -7,11 +7,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { CreationaccountComponent } from './creationaccount/creationaccount.component';
 import { FormsModule } from '@angular/forms';
+import { AuthentificationComponent } from './authentification/authentification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreationaccountComponent
+    CreationaccountComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
