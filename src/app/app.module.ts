@@ -8,13 +8,15 @@ import { CreationaccountComponent } from './creationaccount/creationaccount.comp
 import { GetArticleListComponent } from './get-article-list/get-article-list.component';
 import { ArticleComponent } from './article/article.component';
 import { FormsModule } from '@angular/forms';
+import { AuthentificationComponent } from './authentification/authentification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreationaccountComponent,
     GetArticleListComponent,
-    ArticleComponent
+    ArticleComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
