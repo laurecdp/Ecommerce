@@ -1,0 +1,63 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin-top: 20px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  .footer-links a {
+    color: black;
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+  .footer-links a:hover {
+    opacity: 1;
+  }
+
+  .footer img
+  {
+    width: 40px;
+  }
+
+  .footer-right a {
+    color: black;
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+
+  .footer-right a:hover{
+    opacity: 1;
+  }
+
