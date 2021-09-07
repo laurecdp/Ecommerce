@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="formulaire">
+    Username:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.username">
+    Mdp:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.password">
+    Nom:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.nom">
+    Prénom:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.prenom">
+    Age:
+    <br>
+    <input class="form-control" type="number" [(ngModel)]="user.age">
+    Mail:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.mail">
+    Adresse:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.adresse">
+    Telephone:
+    <br>
+    <input class="form-control" type="string" [(ngModel)]="user.telephone">
+    <br>
+    <button type="submit" class="btn btn-primary mb-3" (click)="create()">S'enregistrer</button>
+    <br>
+    <br>
+  </div>
+ </div>
