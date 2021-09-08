@@ -9,6 +9,7 @@ import { GetArticleListComponent } from './get-article-list/get-article-list.com
 import { ArticleComponent } from './article/article.component';
 import { FormsModule } from '@angular/forms';
 import { AuthentificationComponent } from './authentification/authentification.component';
+import { NewarticleComponent } from './newarticle/newarticle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AuthentificationComponent } from './authentification/authentification.c
     CreationaccountComponent,
     GetArticleListComponent,
     ArticleComponent,
-    AuthentificationComponent
+    AuthentificationComponent,
+    NewarticleComponent
   ],
   imports: [
     BrowserModule,
