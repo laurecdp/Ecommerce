@@ -19,7 +19,7 @@ import { NewarticleComponent } from './newarticle/newarticle.component';
     GetArticleListComponent,
     ArticleComponent,
     AuthentificationComponent,
-    UpdateArticlesComponent
+    UpdateArticlesComponent,
     NewarticleComponent
   ],
   imports: [

@@ -11,7 +11,7 @@ import { NewarticleComponent } from './newarticle/newarticle.component';
 const routes: Routes = [
   {path: 'newAccount', component: CreationaccountComponent},
   {path: 'article/:id', component: ArticleComponent},
-  {path:'update_article/:id', component:UpdateArticlesComponent}
+  {path:'update_article/:id', component:UpdateArticlesComponent},
   {path: 'articles', component:GetArticleListComponent},
   {path: 'login', component:AuthentificationComponent},
   {path: 'articles', component:GetArticleListComponent},
