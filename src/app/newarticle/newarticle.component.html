@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="form-group">
+      <div class="col-md-6">
+        <label for="inputTitle">Titre</label>
+        <input [(ngModel)]="info.titre" type="text" class="form-control" placeholder="Title">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputDescription">Description</label>
+        <textarea [(ngModel)]="info.description" class="form-control" placeholder="Here is the description"></textarea>
+      </div>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="inputPrix">Prix (€)</label>
+      <input [(ngModel)]="info.prix" type="number" class="form-control" placeholder="000">
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="inputImage"></label>
+      <input [(ngModel)]="info.image" type="text" class="form-control" placeholder="image.jpg">
+    </div>
+
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <label class="custom-file-label" for="validatedCustomFile">Choose Image... (jpg / png)</label>
+      <div class="invalid-feedback">Example invalid custom file feedback</div>
+    </div>
+
+    <button (click)="newarticle()" type="submit" id="validateFile" class="btn btn-success">Create new article</button>
+
+</div>
