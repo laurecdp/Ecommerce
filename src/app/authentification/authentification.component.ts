@@ -25,7 +25,7 @@ export class AuthentificationComponent implements OnInit {
   {
     console.log("Login : " + this.username);
     console.log("Pass : " + this.password);
-    this.http.get<User>("http://localhost:50788/api/users/Connection?username=" + this.username + "&password=" + this.password).
+    this.http.get<User>("https://localhost:44330/api/users/Connection?username=" + this.username + "&password=" + this.password).
     subscribe(
       response => {
         this.user = response

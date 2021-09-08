@@ -13,7 +13,7 @@ export class GetArticleListComponent implements OnInit {
 
   constructor(private http:HttpClient) { 
 
-    this.http.get("http://localhost:63505/api/Articles").subscribe(
+    this.http.get("https://localhost:44330/api/Articles").subscribe(
       reponse=>{
         this.MyList = reponse;
       },
