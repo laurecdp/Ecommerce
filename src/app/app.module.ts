@@ -26,8 +26,6 @@ import { NewarticleComponent } from './newarticle/newarticle.component';
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

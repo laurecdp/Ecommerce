@@ -35,5 +35,14 @@ export class CreationaccountComponent implements OnInit {
     console.log(err)
     });
 
-  }
-}
+	}
+
+	previous()
+	{
+	}
+
+	next()
+	{
+	}
+
+} 

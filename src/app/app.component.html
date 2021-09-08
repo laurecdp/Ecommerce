@@ -26,8 +26,8 @@
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../assets/images/avatar2.png" />
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/newAccount">Créer mon compte</a>
-            <a class="dropdown-item" href="/login">Se connecter</a>
-            <a class="dropdown-item" (click)="logout()" href="#" >Se déconnecter</a>
+            <a class="dropdown-item" *ngIf="!session" href="/login">Se connecter</a>
+            <a class="dropdown-item" *ngIf="session" (click)="logout()" href="#" >Se déconnecter</a>
           </div>
         </li>
       </ul>
