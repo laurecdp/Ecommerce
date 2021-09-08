@@ -1,69 +1,24 @@
 <div class="container">
-  <!-- <div class="formulaire">
-    Username:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.username">
-    Mdp:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.password">
-    Nom:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.nom">
-    Prénom:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.prenom">
-    Age:
-    <br>
-    <input class="form-control" type="number" [(ngModel)]="user.age">
-    Mail:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.mail">
-    Adresse:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.adresse">
-    Telephone:
-    <br>
-    <input class="form-control" type="string" [(ngModel)]="user.telephone">
-    <br>
-    <button type="submit" class="btn btn-primary mb-3" (click)="create()">S'enregistrer</button>
-    <br>
-    <br>
-  </div>
- </div> -->
-
-<form id="msform">
-  <!-- progressbar 
-  <ul id="progressbar">
-    <li class="active">Créer votre compte</li>
-    <li>Informations personnelles</li>
-    <li>Informations de livraison</li>
-  </ul> -->
-  <!-- fieldsets -->
-  <fieldset>
+  <div id="msform">
     <h2 class="fs-title">Créer votre compte</h2>
-    <h3 class="fs-subtitle">Première étape</h3>
+    <h3 class="fs-subtitle">Pour vous connecter</h3>
     <input type="string" name="fname" placeholder="Identifiant" [(ngModel)]="user.username">
     <input type="text" name="email" placeholder="Email" [(ngModel)]="user.mail"/>
     <input type="password" name="pass" placeholder="Mot de passe" [(ngModel)]="user.password"/>
-    <input type="button" name="next" (click)="next()" class="next action-button" value="Suivant" />
-  </fieldset>
-  <fieldset>
+    
     <h2 class="fs-title">Informations personnelles</h2>
-    <h3 class="fs-subtitle">Deuxième étape</h3>
+    <h3 class="fs-subtitle">Nous aimerions mieux vous connaître</h3>
     <input type="text" name="lname" placeholder="Nom" [(ngModel)]="user.username"/>
     <input type="text" name="fname" placeholder="Prénom" [(ngModel)]="user.prenom"/>
     <input type="number" name="age" placeholder="Age" [(ngModel)]="user.age"/>
-    <input type="button" name="previous" (click)="previous()" class="previous action-button" value="Précédent" />
-    <input type="button" name="next" (click)="next()" class="next action-button" value="Suivant" />
-  </fieldset>
-  <fieldset>
+    
     <h2 class="fs-title">Informations de livraison</h2>
-    <h3 class="fs-subtitle">Dernière étape</h3>
+    <h3 class="fs-subtitle">Pour que les paquets arrivent au pied de chez vous</h3>
     <input type="text" name="phone" placeholder="Phone" [(ngModel)]="user.telephone"/>
     <textarea name="address" placeholder="Address" [(ngModel)]="user.adresse"></textarea>
-    <input type="button" name="previous" (click)="previous()" class="previous action-button" value="Précédent" />
-    <input type="submit" name="submit" (click)="create()" class="submit action-button" value="Enregistrer" />
-  </fieldset>
-</form>
+    <button type="submit" class="submit action-button" (click)="create()">S'enregistrer</button>
+  </div>
+</div>
+
 
 
