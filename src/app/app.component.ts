@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjetECommerce';
+
+  session = sessionStorage.getItem("auth");
+
+
   logout() {
     sessionStorage.clear();
     console.log("clean");

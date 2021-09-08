@@ -10,6 +10,7 @@ import { ArticleComponent } from './article/article.component';
 import { FormsModule } from '@angular/forms';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { UpdateArticlesComponent } from './update-articles/update-articles.component';
+import { NewarticleComponent } from './newarticle/newarticle.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UpdateArticlesComponent } from './update-articles/update-articles.compo
     ArticleComponent,
     AuthentificationComponent,
     UpdateArticlesComponent
+    NewarticleComponent
   ],
   imports: [
     BrowserModule,
@@ -26,8 +28,6 @@ import { UpdateArticlesComponent } from './update-articles/update-articles.compo
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,10 @@
-<div class="container">
-  <div class="mb-3">
-    <label class="form-label">Identifiant:</label>
-    <input class="form-control" type="string" [(ngModel)]="username">
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Mdp:</label>
-    <input class="form-control" type="password" [(ngModel)]="password">
-  </div>
-  <br>
-  <button class="btn btn-primary" (click)="login()">Se connecter</button>
-  <div class="container">
-    <div>{{message}}</div>
+<div class="login-page">
+  <div class="form">
+    <div class="login-form">
+      <input type="text" [(ngModel)]="username" placeholder="identifiant"/>
+      <input type="password" [(ngModel)]="password" placeholder="mot de passe"/>
+      <button (click)="login()">Se connecter</button>
+      <p class="message">Pas encore enregistré? <a href="/newAccount">Créer un compte</a></p>
+    </div>
   </div>
 </div>

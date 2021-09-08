@@ -28,7 +28,7 @@ export class AuthentificationComponent implements OnInit {
       response => {
         this.user = response
         sessionStorage.setItem("auth", this.user.nom)
-        window.location.href='http://localhost:4200/';
+        window.location.href='http://localhost:4200/articles';
       },
       err => {
         console.log("Erreur")
