@@ -7,6 +7,7 @@ import { ArticleComponent } from './article/article.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { UpdateArticlesComponent } from './update-articles/update-articles.component';
 import { NewarticleComponent } from './newarticle/newarticle.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path: 'newAccount', component: CreationaccountComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'login', component:AuthentificationComponent},
   {path: 'articles', component:GetArticleListComponent},
   {path: 'newarticle', component:NewarticleComponent},
+  {path: 'cart', component:CartComponent},
 ];
 
 @NgModule({

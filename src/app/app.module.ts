@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { UpdateArticlesComponent } from './update-articles/update-articles.component';
 import { NewarticleComponent } from './newarticle/newarticle.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NewarticleComponent } from './newarticle/newarticle.component';
     ArticleComponent,
     AuthentificationComponent,
     UpdateArticlesComponent,
-    NewarticleComponent
+    NewarticleComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
