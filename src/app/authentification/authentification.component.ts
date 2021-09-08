@@ -23,12 +23,14 @@ export class AuthentificationComponent implements OnInit {
 
   login()
   {
-    this.http.get<User>("https://localhost:44330/api/users/Connection?username=" + this.username + "&password=" + this.password).
+    console.log("Login : " + this.username);
+    console.log("Pass : " + this.password);
+    this.http.get<User>("http://localhost:50788/api/users/Connection?username=" + this.username + "&password=" + this.password).
     subscribe(
       response => {
         this.user = response
-        sessionStorage.setItem("auth", this.user.nom)
-        window.location.href='http://localhost:4200/articles';
+        sessionStorage.setItem("auth", this.user.username)
+        window.location.href='http://localhost:4200/';
       },
       err => {
         console.log("Erreur")
