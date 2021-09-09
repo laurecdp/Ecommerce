@@ -52,7 +52,7 @@ export class CartComponent implements OnInit {
           ligne.article.image = element.Article.Image;
           this.lignes.push(ligne);
 
-          this.prix_total += element.Article.Prix;
+          this.prix_total += (element.Article.Prix * element.Quantite);
 
         });
 

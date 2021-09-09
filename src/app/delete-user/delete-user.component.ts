@@ -23,19 +23,19 @@ export class DeleteUserComponent implements OnInit {
   }
 
   charger(){
-    this.http.get<Array<User>>("http://localhost:63505/api/Users").subscribe(
+    this.http.get<Array<User>>("http://localhost:50788/api/Users").subscribe(
       reponse=>{
         this.Mylist = reponse;
       },
       err => {
         console.log("*KO");
         this.message = "Problème!!";
-      } 
+      }
     );
   }
 
   delete(id) {
-    this.http.delete("http://localhost:63505/api/Users/?username=" + id).
+    this.http.delete("http://localhost:50788/api/Users/?username=" + id).
     subscribe(
       response => {
         this.Mylist = response;
