@@ -13,6 +13,8 @@ import { NewarticleComponent } from './newarticle/newarticle.component';
 import { CartComponent } from './cart/cart.component';
 import { GetArticleListComponent } from './get-article-list/get-article-list.component';
 import { DeleteArticlesComponent } from './delete-articles/delete-articles.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,10 @@ import { DeleteArticlesComponent } from './delete-articles/delete-articles.compo
     AuthentificationComponent,
     UpdateArticlesComponent,
     NewarticleComponent,
+    ProfileComponent,
     CartComponent,
-    DeleteArticlesComponent
+    DeleteArticlesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
