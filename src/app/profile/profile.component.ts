@@ -13,7 +13,7 @@ export class ProfileComponent implements OnInit {
   username:any
   message:any
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { 
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
     if(sessionStorage.getItem("auth") == null) {
       window.location.href='http://localhost:4200/login';
     }
@@ -23,7 +23,7 @@ export class ProfileComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.username = params.username
     });
-    this.http.get("http://localhost:63505/api/Users/?username=" + this.username).subscribe(
+    this.http.get("http://localhost:50788/api/Users/?username=" + this.username).subscribe(
     response => {
       this.user = response
     })
@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
   update()
   {
     const body = JSON.stringify(this.user);
-    this.http.put<User>("http://localhost:63505/api/Users/?username=" + this.username, body, {
+    this.http.put<User>("http://localhost:50788/api/Users/?username=" + this.username, body, {
     headers: new HttpHeaders({ "Content-Type": "application/json"})
   }).subscribe(response => {
     this.message = "CONTACT MIS A JOUR";

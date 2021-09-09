@@ -26,9 +26,9 @@ import { ProfileComponent } from './profile/profile.component';
     UpdateArticlesComponent,
     NewarticleComponent,
     ProfileComponent,
+    HomeComponent,
     CartComponent,
     DeleteArticlesComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
