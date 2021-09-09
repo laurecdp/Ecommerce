@@ -53,9 +53,7 @@ export class ArticleComponent implements OnInit {
     })
     .subscribe(response => {
       this.message = "Ajouté au panier avec succès";
-      console.log(response);
     }, err => {
-      console.log(err)
     });
 
   }

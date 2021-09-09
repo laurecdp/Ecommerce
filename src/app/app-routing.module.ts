@@ -9,6 +9,7 @@ import { UpdateArticlesComponent } from './update-articles/update-articles.compo
 import { NewarticleComponent } from './newarticle/newarticle.component';
 import { CartComponent } from './cart/cart.component';
 import { DeleteArticlesComponent } from './delete-articles/delete-articles.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: 'newAccount', component: CreationaccountComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'newarticle', component:NewarticleComponent},
   {path: 'cart', component:CartComponent},
   {path: 'delete_article', component:DeleteArticlesComponent},
+  {path: 'home', component:HomeComponent},
 ];
 
 @NgModule({

@@ -27,7 +27,8 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #F4F4F4;
+  
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -36,11 +37,13 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  margin-top: 10px;
 }
 
 .avatar {
   width: 40px;
   border-radius: 50%;
+  margin-top: 10px;
 }
 
 .footer {
@@ -86,5 +89,10 @@
 
   .footer-right a:hover{
     opacity: 1;
+  }
+
+  .icon{
+    width: 40px;
+    margin-right: 20px;
   }
 
