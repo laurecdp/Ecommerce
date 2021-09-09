@@ -1,28 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-8 col-lg-5">
-      <h6 class="text-muted">Liste d'articles du panier</h6>
       <table class="table table-striped table-dark">
         <thead>
           <tr>
             <td>Image</td>
             <td>Quantite</td>
             <td>Titre</td>
-            <td>Prix</td>
+            <td>Prix (TTC)</td>
             <td>Supprimer</td>
           </tr>
         </thead>
         <tr *ngFor="let pist of lignes;">
-          <td><img width="100" height="200" src="../assets/images/{{pist.article.image}}"></td>
+          <td><img style="width:100px; height:100%;" src="../assets/images/{{pist.article.image}}"></td>
           <td> {{pist.quantite}}</td>
           <td> {{pist.article.titre}}</td>
-          <td> {{pist.article.prix}}</td>
+          <td> {{pist.article.prix}}€</td>
           <td><button (click)="delete(pist.id)" class="btn btn-danger">DELETE</button></td>
         </tr>
       </table>
+      <div style="font-size: 25px;">
+        <div class="badge badge-warning"> PRIX TOTAL : {{prix_total_HT}}€ / HT</div><br>
+        <div class="badge badge-warning"> PRIX TOTAL : {{prix_total}}€ / TTC</div>
+      </div>
 
-      <div class="badge-info"> PRIX TOTAL HT : {{prix_total_HT}}</div>
-      <div class="badge-info"> PRIX TOTAL : {{prix_total}}</div>
-    </div>
   </div>
 </div>

@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.http.get("http://localhost:63505/api/Users/?username=" + this.username).subscribe(
+    this.http.get("http://localhost:50788/api/Users/?username=" + this.username).subscribe(
     response => {
       this.user = response
     })
