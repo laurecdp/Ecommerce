@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'ProjetECommerce';
 
   session = sessionStorage.getItem("auth");
+  admin = sessionStorage.getItem("admin");
 
 
   logout() {
