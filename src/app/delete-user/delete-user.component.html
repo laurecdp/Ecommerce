@@ -1,0 +1,27 @@
+<div>
+    <table>
+    <tr *ngFor="let pist of Mylist;" scope="row">
+        <td>
+            {{pist.username}}
+            </td>
+            <td>
+            {{pist.nom}}
+            </td>
+            <td>
+            {{pist.prenom}}
+            </td>
+            <td>
+            {{pist.age}}
+            </td>
+            <td>
+            {{pist.adresse}}
+            </td>
+            <td>
+            {{pist.telephone}}
+            </td>
+            <td>
+            <button (click)="delete(pist.username)">DELETE</button>
+        </td>
+    </tr>
+</table>
+</div>
