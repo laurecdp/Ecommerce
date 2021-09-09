@@ -20,7 +20,7 @@ export class UpdateArticlesComponent implements OnInit {
   ngOnInit(): void {
 
     if(sessionStorage.getItem("auth") == null || sessionStorage.getItem("admin") == null) {
-      window.location.href='http://localhost:4200/';
+      window.location.href='http://localhost:4200/home';
     }
 
     this.route.params.subscribe(params => {
