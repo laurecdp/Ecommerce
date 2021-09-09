@@ -28,7 +28,18 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #F4F4F4;
-  
+}
+
+.navbar-lewagon a{
+  justify-content: space-between;
+  color: black;
+}
+
+.navbar-lewagon .articles{
+  justify-content: space-between;
+  color: black;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .navbar-lewagon .navbar-collapse {
