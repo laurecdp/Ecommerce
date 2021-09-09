@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Ligne } from '../ligne';
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +11,9 @@ export class CartComponent implements OnInit {
 
   lignes: any;
   message: any;
-  username: string = sessionStorage.getItem("auth");;
+  username: string = sessionStorage.getItem("auth");
+  prix_total_HT : number = 0;
+  prix_total : number = 0;
 
   constructor(private http:HttpClient) {
 
@@ -22,7 +25,6 @@ export class CartComponent implements OnInit {
     .subscribe(
       response => {
         this.lignes = response;
-        console.log(response);
       },
       err => {
         console.log("*KO")

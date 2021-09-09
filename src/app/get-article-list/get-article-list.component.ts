@@ -10,22 +10,43 @@ export class GetArticleListComponent implements OnInit {
 
   MyList: any;
   message:any
+  admin:string;
 
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient) {}
 
-    this.http.get("http://localhost:50788/api/Articles").subscribe(
-      reponse => {
-        this.MyList = reponse;
+  ngOnInit(): void {
+    if(sessionStorage.getItem("admin")) this.admin = "1";
+    else this.admin = null;
 
-        console.log(reponse);
+    this.reload();
+  }
+
+  reload() {
+    this.http.get("http://localhost:50788/api/Articles/").
+    subscribe(
+      response => {
+        this.MyList = response;
       },
       err => {
-        console.log("*KO")
-        this.message = "Problème!!"
+        console.log("Erreur")
+        this.message = "erreur!"
       }
-    );
+    )
   }
-  ngOnInit(): void {
+
+  delete(id) {
+    this.http.delete("http://localhost:50788/api/Articles/" + id).
+    subscribe(
+      response => {
+        this.MyList = response;
+        this.reload();
+        this.message = "article supprimé"
+      },
+      err => {
+        console.log("Erreur")
+        this.message = "erreur!"
+      }
+    )
   }
 
 }

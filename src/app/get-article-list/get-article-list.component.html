@@ -1,18 +1,26 @@
 <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-8 col-lg-5">
-        <h6 class="text-muted">Liste d'articles</h6>
-        <ul class="list-group" *ngFor="let pist of MyList;">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            {{pist.Titre}}<br/>
-            {{pist.Description}} <br/>
-            {{pist.Prix}} Euros <br/>
-            <button><a href="http://localhost:4200/article/{{pist.ID}}">Regarder</a></button>
-            <div class="image-parent">
-                <img src="../assets/images/{{pist.Image}}" class="img-fluid" alt="quixote">
+  <div class="cards">
+    <ul class="list-group" *ngFor="let pist of MyList;">
+      <a href="http://localhost:4200/article/{{pist.ID}}">
+        <div class="card-product">
+            <img src="../assets/images/{{pist.Image}}" alt="game_image">
+          <div class="card-product-infos">
+            <div class="titles">
+              <div class="title">
+                <a href="http://localhost:4200/article/{{pist.ID}}">
+                  <h5>{{pist.Titre}}</h5>
+                </a>
+              </div>
+              <div class="price">
+                <h5>{{pist.Prix}}€</h5>
+              </div>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+            <p class="description">{{pist.Description}}</p>
+            <button *ngIf="admin" class="btn"><a href="/update_article/{{pist.ID}}"><img class="icon" src="../assets/images/edit.png"></a></button>
+            <button *ngIf="admin" class="btn" (click)="delete(pist.ID)"><img class="icon" src="../assets/images/cross.png"></button>
+          </div>
+        </div>
+      </a>
+    </ul>
   </div>
+</div>

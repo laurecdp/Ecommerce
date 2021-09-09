@@ -14,15 +14,14 @@ export class DeleteArticlesComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.reload(); 
+    this.reload();
   }
 
-  reload()
-  {
-    this.http.get("https://localhost:44330/api/Articles/").
+  reload() {
+    this.http.get("http://localhost:50788/api/Articles/").
     subscribe(
       response => {
-        this.MyList = response; 
+        this.MyList = response;
       },
       err => {
         console.log("Erreur")
@@ -31,9 +30,8 @@ export class DeleteArticlesComponent implements OnInit {
     )
   }
 
-  delete(id)
-  {
-    this.http.delete("https://localhost:44330/api/Articles/" + id).
+  delete(id) {
+    this.http.delete("http://localhost:50788/api/Articles/" + id).
     subscribe(
       response => {
         this.MyList = response;

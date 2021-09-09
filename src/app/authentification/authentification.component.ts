@@ -34,7 +34,7 @@ export class AuthentificationComponent implements OnInit {
         if(this.user.Admin) {
           sessionStorage.setItem("admin", "1");
         }
-        window.location.href='http://localhost:4200/';
+        window.location.href='http://localhost:4200/home';
       },
       err => {
         console.log("Erreur")

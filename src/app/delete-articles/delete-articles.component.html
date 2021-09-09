@@ -5,25 +5,25 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <a href="http://localhost:4200/article/{{pist.id}}">
-                <img src="../assets/images/{{pist.image}}" class="img-fluid rounded-start" alt="game_image">
+              <a href="http://localhost:4200/article/{{pist.ID}}">
+                <img src="../assets/images/{{pist.Image}}" class="img-fluid rounded-start" alt="game_image">
               </a>
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <div class="titles">
                   <div class="title">
-                    <a href="http://localhost:4200/article/{{pist.id}}">
-                      <h5 class="card-title">{{pist.titre}}</h5>
+                    <a href="http://localhost:4200/article/{{pist.ID}}">
+                      <h5 class="card-title">{{pist.Titre}}</h5>
                     </a>
                   </div>
                   <div class="price">
-                    <h5 class="card-title price">{{pist.prix}}€</h5>
+                    <h5 class="card-title price">{{pist.Prix}}€</h5>
                   </div>
                 </div>
-                <p class="card-text">{{pist.description}}</p>
+                <p class="card-text">{{pist.Description}}</p>
                 <button class="btn"><img class="icon" src="../assets/images/plus.png"></button>
-                <button class="btn" (click)="delete(pist.id)"><img class="icon" src="../assets/images/cross.png"></button>
+                <button class="btn" (click)="delete(pist.ID)"><img class="icon" src="../assets/images/cross.png"></button>
               </div>
             </div>
           </div>
