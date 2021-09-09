@@ -1,17 +1,26 @@
 <div class="container">
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="../assets/images/{{article.Image}}" class="img-fluid rounded-start" alt="...">
+  <div class="card-product">
+    <img src="../assets/images/{{article.Image}}" class="img-fluid rounded-start" alt="...">
+    <div class="card-product-infos">
+      <div class="titles">
+        <div class="title">
+          <h5>{{article.Titre}}</h5>
+        </div>
+        <div class="price">
+          <h5>{{article.Prix}}€</h5>
+        </div>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{article.Titre}}</h5>
-          <p class="card-text">{{article.Description}}</p>
-          <p class="card-text">{{article.Prix}}€</p>
-          Quantite : <input [(ngModel)]="quantity" class="form-control" type="number" min="1" value="1"><br>
+      <p class="description">{{article.Description}}</p>
+      <div class="quantite">
 
-          <button (click)="AddToCart()" class="btn btn-success">Ajouter au panier</button>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Quantité : </label>
+            <input [(ngModel)]="quantity" class="form-control" type="number" min="1" value="1">
+          </div>
+          <div class="col">
+            <button (click)="AddToCart()" class="btn btn-success">Ajouter au panier</button>
+          </div>
         </div>
       </div>
     </div>

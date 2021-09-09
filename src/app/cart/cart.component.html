@@ -13,11 +13,11 @@
           </tr>
         </thead>
         <tr *ngFor="let pist of lignes;">
-          <td><img width="100" height="200" src="../assets/images/{{pist.Article.Image}}"></td>
-          <td> {{pist.Quantite}}</td>
-          <td> {{pist.Article.Titre}}</td>
-          <td> {{pist.Article.Prix}}</td>
-          <td><button (click)="delete(pist.ID)" class="btn btn-danger">DELETE</button></td>
+          <td><img width="100" height="200" src="../assets/images/{{pist.article.image}}"></td>
+          <td> {{pist.quantite}}</td>
+          <td> {{pist.article.titre}}</td>
+          <td> {{pist.article.prix}}</td>
+          <td><button (click)="delete(pist.id)" class="btn btn-danger">DELETE</button></td>
         </tr>
       </table>
 

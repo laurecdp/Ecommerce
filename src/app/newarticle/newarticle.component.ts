@@ -15,7 +15,7 @@ export class NewarticleComponent implements OnInit {
 
   ngOnInit(): void {
     if(sessionStorage.getItem("auth") == null || sessionStorage.get("admin") == null) {
-      window.location.href='http://localhost:4200/';
+      window.location.href='http://localhost:4200/home';
     }
   }
 

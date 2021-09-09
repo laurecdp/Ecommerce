@@ -12,7 +12,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/articles"><img class="icon" src="../assets/images/articles.png"/></a>
         </li>
-        <li class="nav-item">
+        <li *ngIf="session" class="nav-item">
           <a class="nav-link" href="/cart"><img class="icon" src="../assets/images/cart.png"></a>
         </li>
         <li class="nav-item dropdown">
