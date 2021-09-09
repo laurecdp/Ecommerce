@@ -14,6 +14,9 @@ export class NewarticleComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    if(sessionStorage.getItem("auth") == null || sessionStorage.get("admin") == null) {
+      window.location.href='http://localhost:4200/';
+    }
   }
 
   newarticle() {

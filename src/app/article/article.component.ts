@@ -11,14 +11,14 @@ import { Ligne } from '../ligne';
 })
 export class ArticleComponent implements OnInit {
 
-  article: Article;
+  article: any;
   id: any;
   message: string;
 
   info = {
-    username : sessionStorage.getItem("auth"),
+    id_username : sessionStorage.getItem("auth"),
     id_article : 0,
-    quantity : 0
+    quantite : 0
   }
 
   quantity: number;
@@ -30,9 +30,10 @@ export class ArticleComponent implements OnInit {
       this.id = params.id;
     });
 
-    this.http.get<Article>("http://localhost:50788/api/articles/" + this.id)
+    this.http.get("http://localhost:50788/api/articles/" + this.id)
     .subscribe(
       response => {
+        console.log(response);
         this.article = response;
       }
     );
@@ -41,12 +42,13 @@ export class ArticleComponent implements OnInit {
   AddToCart() {
 
     this.info.id_article = this.id;
-    this.info.username = sessionStorage.getItem("auth");
-    this.info.quantity = this.quantity;
+    this.info.id_username = sessionStorage.getItem("auth");
+    this.info.quantite = this.quantity;
 
     const body = JSON.stringify(this.info);
+    console.log(body);
 
-    this.http.post("http://localhost:50788/api/Panier", body, {
+    this.http.post("http://localhost:50788/api/Panier/", body, {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
       })

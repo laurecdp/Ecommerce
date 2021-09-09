@@ -16,23 +16,20 @@ export class CreationaccountComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  create()
-  {
+  create() {
     const body = JSON.stringify(this.user)
-    this.http.post("https://localhost:44330/api/Users",body, {
-    headers: new HttpHeaders({
-
-    "Content-Type": "application/json"
-
+    this.http.post("http://localhost:50788/api/Users",body, {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
     })
 
     }).
     subscribe(response => {
-    alert(this.message = "Votre compte a bien été enregistré");
-    console.log(response);
-    },
-    err => {
-    console.log(err)
+      alert(this.message = "Votre compte a bien été enregistré");
+        console.log(response);
+      },
+      err => {
+        console.log(err)
     });
 
 	}
@@ -45,4 +42,4 @@ export class CreationaccountComponent implements OnInit {
 	{
 	}
 
-} 
+}
