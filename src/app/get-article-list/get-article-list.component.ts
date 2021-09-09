@@ -11,11 +11,13 @@ export class GetArticleListComponent implements OnInit {
   MyList: any;
   message:any
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient) {
 
-    this.http.get("http://localhost:63505/api/Articles").subscribe(
-      reponse=>{
+    this.http.get("http://localhost:50788/api/Articles").subscribe(
+      reponse => {
         this.MyList = reponse;
+
+        console.log(reponse);
       },
       err => {
         console.log("*KO")

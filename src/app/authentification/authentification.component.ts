@@ -13,7 +13,7 @@ export class AuthentificationComponent implements OnInit {
   username: string
   password: string
   message: any
-  user: User
+  user: any
   auth: string
 
   constructor(private http: HttpClient) { }
@@ -21,15 +21,19 @@ export class AuthentificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login()
-  {
+  login() {
     console.log("Login : " + this.username);
     console.log("Pass : " + this.password);
-    this.http.get<User>("http://localhost:50788/api/users/Connection?username=" + this.username + "&password=" + this.password).
+    this.http.get("http://localhost:50788/api/users/Connection?username=" + this.username + "&password=" + this.password).
     subscribe(
       response => {
+
+        console.log(response);
         this.user = response
-        sessionStorage.setItem("auth", this.user.username)
+        sessionStorage.setItem("auth", this.user.Username)
+        if(this.user.Admin) {
+          sessionStorage.setItem("admin", "1");
+        }
         window.location.href='http://localhost:4200/';
       },
       err => {

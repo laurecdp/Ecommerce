@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Article } from '../article';
-import { Ligne } from '../ligne';
 
 @Component({
   selector: 'app-cart',
