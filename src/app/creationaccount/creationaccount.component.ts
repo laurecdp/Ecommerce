@@ -17,8 +17,10 @@ export class CreationaccountComponent implements OnInit {
   }
 
   create() {
+    this.user.admin = 0;
     const body = JSON.stringify(this.user)
-    this.http.post("http://localhost:50788/api/Users",body, {
+    console.log(body);
+    this.http.post("http://localhost:50788/api/Users/", body, {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
     })
@@ -43,3 +45,5 @@ export class CreationaccountComponent implements OnInit {
 	}
 
 }
+
+
