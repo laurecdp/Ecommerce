@@ -1,18 +1,39 @@
 <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-8 col-lg-5">
-        <h6 class="text-muted">Liste d'articles</h6>
-        <ul class="list-group" *ngFor="let pist of MyList;">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            {{pist.Titre}}<br/>
-            {{pist.Description}} <br/>
-            {{pist.Prix}} Euros <br/>
-            <button><a href="http://localhost:4200/article/{{pist.ID}}">Regarder</a></button>
-            <div class="image-parent">
-                <img src="../assets/images/{{pist.Image}}" class="img-fluid" alt="quixote">
+
+  <div class="row">
+    <div class="col-12 col-sm-8 col-lg-5">
+      <ul class="list-group" *ngFor="let pist of MyList;">
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <a href="http://localhost:4200/article/{{pist.ID}}">
+                <img src="../assets/images/{{pist.Image}}" class="img-fluid rounded-start" alt="game_image">
+              </a>
             </div>
-          </li>
-        </ul>
-      </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="titles">
+                  <div class="title">
+                    <a href="http://localhost:4200/article/{{pist.ID}}">
+                      <h5 class="card-title">{{pist.Titre}}</h5>
+                    </a>
+                  </div>
+                  <div class="price">
+                    <h5 class="card-title price">{{pist.Prix}}€</h5>
+                  </div>
+                </div>
+                <p class="card-text">{{pist.Description}}</p>
+                <button class="btn"><img class="icon" src="../assets/images/plus.png"></button>
+
+                <button *ngIf="admin" class="btn" (click)="delete(pist.ID)"><img class="icon" src="../assets/images/cross.png"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ul>
     </div>
   </div>
+</div>
+
+
