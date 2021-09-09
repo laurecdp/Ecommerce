@@ -9,6 +9,7 @@ import { UpdateArticlesComponent } from './update-articles/update-articles.compo
 import { NewarticleComponent } from './newarticle/newarticle.component';
 import { CartComponent } from './cart/cart.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {path: 'newAccount', component: CreationaccountComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'login', component:AuthentificationComponent},
   {path: 'newarticle', component:NewarticleComponent},
   {path: 'cart', component:CartComponent},
-  {path: 'delete_user', component:DeleteUserComponent}
+  {path: 'delete_user', component:DeleteUserComponent},
+  {path: 'profile/:username', component:ProfileComponent}
 ];
 
 @NgModule({
