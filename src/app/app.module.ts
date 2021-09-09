@@ -15,6 +15,7 @@ import { GetArticleListComponent } from './get-article-list/get-article-list.com
 import { DeleteArticlesComponent } from './delete-articles/delete-articles.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     CartComponent,
     DeleteArticlesComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,

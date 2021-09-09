@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -13,17 +12,17 @@ export class ProfileComponent implements OnInit {
   username:any
   message:any
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private http: HttpClient) {
     if(sessionStorage.getItem("auth") == null) {
       window.location.href='http://localhost:4200/login';
+    }
+    else {
+      this.username = sessionStorage.getItem("auth");
     }
    }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.username = params.username
-    });
-    this.http.get("http://localhost:50788/api/Users/?username=" + this.username).subscribe(
+    this.http.get("http://localhost:63505/api/Users/?username=" + this.username).subscribe(
     response => {
       this.user = response
     })

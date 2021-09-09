@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'delete_article', component:DeleteArticlesComponent},
   {path: 'home', component:HomeComponent},
   {path: 'delete_user', component:DeleteUserComponent},
-  {path: 'profile/:username', component:ProfileComponent}
+  {path: 'profile', component:ProfileComponent}
 ];
 
 @NgModule({
